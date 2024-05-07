@@ -16,6 +16,14 @@ export default defineConfig({
       },
     },
   },
+  outDir: "dist",
+  emptyOutDir: true,
+  sourcemap: "hidden",
+  rollupOptions: {
+    input: {
+      app: "./index.html",
+    },
+  },
   server: {
     proxy: {
       "/api/v1": {
