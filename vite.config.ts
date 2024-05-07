@@ -5,17 +5,6 @@ import svgr from "vite-plugin-svgr";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [svgr(), react()],
-  build: {
-    server: {
-      proxy: {
-        "/api/v1": {
-          target: "https://663a1b561ae792804bee15db.mockapi.io",
-          changeOrigin: true,
-          rewrite: (path: string) => path.replace(/^\/api/, "/api"),
-        },
-      },
-    },
-  },
   outDir: "dist",
   emptyOutDir: true,
   sourcemap: "hidden",
