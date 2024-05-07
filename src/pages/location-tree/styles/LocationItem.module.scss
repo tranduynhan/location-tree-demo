@@ -1,0 +1,25 @@
+.location_wrap {
+  $gap: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: $gap;
+
+  .location_wrap_row {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    width: 100%;
+    border-radius: 0px;
+    border-bottom: 1px solid black;
+    .label_item {
+      margin-left: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .icon_item {
+      height: 32px;
+      width: 32px;
+    }
+  }
+}

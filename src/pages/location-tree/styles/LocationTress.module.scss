@@ -1,0 +1,28 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+$gap: 10px;
+.tree_section {
+  max-width: 600px;
+  height: 80vh;
+  margin: auto;
+  overflow: auto;
+  background-color: #fff;
+  border: 1px solid black;
+  display: flex;
+  padding: $gap;
+  flex-direction: column;
+}
