@@ -1,8 +1,9 @@
+import * as React from "react"
 import { useEffect, useState } from "react";
 import styles from "../styles/LocationItem.module.scss";
-import LocationIcon from "../../../assets/location-icon.svg?react";
-import FolderOpenIcon from "../../../assets/folder-open.svg?react";
-import FolderCloseIcon from "../../../assets/folder-close.svg?react";
+// import LocationIcon from "../../../assets/location-icon.svg?react";
+// import FolderOpenIcon from "../../../assets/folder-open.svg?react";
+// import FolderCloseIcon from "../../../assets/folder-close.svg?react";
 
 const LocationRowItem: React.FC<ILocationProps> = ({
   label,
@@ -18,17 +19,17 @@ const LocationRowItem: React.FC<ILocationProps> = ({
     }
   }, [isExpandDefault]);
 
-  const renderIcon = () => {
-    if (!isHasChild) {
-      return <LocationIcon className={styles.icon_item} />;
-    } else {
-      if (isExpandChild) {
-        return <FolderOpenIcon className={styles.icon_item} />;
-      } else {
-        return <FolderCloseIcon className={styles.icon_item} />;
-      }
-    }
-  };
+  // const renderIcon = () => {
+  //   if (!isHasChild) {
+  //     return <LocationIcon className={styles.icon_item} />;
+  //   } else {
+  //     if (isExpandChild) {
+  //       return <FolderOpenIcon className={styles.icon_item} />;
+  //     } else {
+  //       return <FolderCloseIcon className={styles.icon_item} />;
+  //     }
+  //   }
+  // };
   const rennderChild = () => {
     if (isHasChild && locations && isExpandChild) {
       return locations.map((it) => {
@@ -42,7 +43,7 @@ const LocationRowItem: React.FC<ILocationProps> = ({
         className={styles.location_wrap_row}
         onClick={() => setIsExpandChild((pre) => !pre)}
       >
-        <span className={styles.icon_item}>{renderIcon()}</span>
+        {/* <span className={styles.icon_item}>{renderIcon()}</span> */}
         <label className={styles.label_item}>{label}</label>
       </button>
       {rennderChild()}

@@ -1,6 +1,6 @@
 import axios from "axios";
 const BASE_URL =
-  import.meta.env.MODE === "development"
+  process.env.MODE === "development"
     ? "/api/v1"
     : "https://663a1b561ae792804bee15db.mockapi.io/api/v1";
 

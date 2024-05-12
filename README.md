@@ -11,3 +11,11 @@
 ## Run source code
 
 - npm run dev
+
+## Run unit test
+
+- npm run test
+
+## View Unit test coverage
+
+- npm run coverage
